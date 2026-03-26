@@ -54,3 +54,15 @@ geo_ip:
   file_bucket: aifk-dev
   file_key: geo_ip_country_common
   local_mode: true
+# 定时任务配置
+cronjob:
+  jobs:
+    - name: "test"
+      spec: "* * * * * *" # 每分钟执行一次测试任务
+      # 默认启用，无需设置 disabled
+    # 添加更多定时任务...
+    # - name: "task-name"
+    #   spec: "0 0 * * *"       # cron 表达式
+    # - name: "disabled-task"
+    #   spec: "0 0 * * *"
+    #   disabled: true          # 显式禁用
